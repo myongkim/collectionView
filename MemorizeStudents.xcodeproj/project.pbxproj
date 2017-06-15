@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		E8B2AAB31EF1A0620054BEB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2AAB21EF1A0620054BEB1 /* AppDelegate.swift */; };
-		E8B2AAB51EF1A0620054BEB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2AAB41EF1A0620054BEB1 /* ViewController.swift */; };
 		E8B2AAB81EF1A0620054BEB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2AAB61EF1A0620054BEB1 /* Main.storyboard */; };
 		E8B2AABA1EF1A0620054BEB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B2AAB91EF1A0620054BEB1 /* Assets.xcassets */; };
 		E8B2AABD1EF1A0620054BEB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8B2AABB1EF1A0620054BEB1 /* LaunchScreen.storyboard */; };
+		E8B2AAC51EF1A2D90054BEB1 /* kids in Resources */ = {isa = PBXBuildFile; fileRef = E8B2AAC41EF1A2D90054BEB1 /* kids */; };
+		E8B2AAC71EF1A3670054BEB1 /* MyStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2AAC61EF1A3670054BEB1 /* MyStudentViewController.swift */; };
+		E8B2AAC91EF1A3BD0054BEB1 /* StudentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2AAC81EF1A3BD0054BEB1 /* StudentItem.swift */; };
+		E8B2AACB1EF1A7AE0054BEB1 /* StudentItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2AACA1EF1A7AE0054BEB1 /* StudentItemCell.swift */; };
+		E8B2AACD1EF1B02A0054BEB1 /* StudentItemHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B2AACC1EF1B02A0054BEB1 /* StudentItemHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E8B2AAAF1EF1A0620054BEB1 /* MemorizeStudents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemorizeStudents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8B2AAB21EF1A0620054BEB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8B2AAB41EF1A0620054BEB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8B2AAB71EF1A0620054BEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8B2AAB91EF1A0620054BEB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8B2AABC1EF1A0620054BEB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8B2AABE1EF1A0620054BEB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8B2AAC41EF1A2D90054BEB1 /* kids */ = {isa = PBXFileReference; lastKnownFileType = folder; path = kids; sourceTree = "<group>"; };
+		E8B2AAC61EF1A3670054BEB1 /* MyStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStudentViewController.swift; sourceTree = "<group>"; };
+		E8B2AAC81EF1A3BD0054BEB1 /* StudentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentItem.swift; sourceTree = "<group>"; };
+		E8B2AACA1EF1A7AE0054BEB1 /* StudentItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentItemCell.swift; sourceTree = "<group>"; };
+		E8B2AACC1EF1B02A0054BEB1 /* StudentItemHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentItemHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +63,13 @@
 			isa = PBXGroup;
 			children = (
 				E8B2AAB21EF1A0620054BEB1 /* AppDelegate.swift */,
-				E8B2AAB41EF1A0620054BEB1 /* ViewController.swift */,
+				E8B2AAC61EF1A3670054BEB1 /* MyStudentViewController.swift */,
+				E8B2AAC81EF1A3BD0054BEB1 /* StudentItem.swift */,
+				E8B2AACA1EF1A7AE0054BEB1 /* StudentItemCell.swift */,
+				E8B2AACC1EF1B02A0054BEB1 /* StudentItemHeader.swift */,
 				E8B2AAB61EF1A0620054BEB1 /* Main.storyboard */,
 				E8B2AAB91EF1A0620054BEB1 /* Assets.xcassets */,
+				E8B2AAC41EF1A2D90054BEB1 /* kids */,
 				E8B2AABB1EF1A0620054BEB1 /* LaunchScreen.storyboard */,
 				E8B2AABE1EF1A0620054BEB1 /* Info.plist */,
 			);
@@ -126,6 +138,7 @@
 				E8B2AABD1EF1A0620054BEB1 /* LaunchScreen.storyboard in Resources */,
 				E8B2AABA1EF1A0620054BEB1 /* Assets.xcassets in Resources */,
 				E8B2AAB81EF1A0620054BEB1 /* Main.storyboard in Resources */,
+				E8B2AAC51EF1A2D90054BEB1 /* kids in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8B2AAB51EF1A0620054BEB1 /* ViewController.swift in Sources */,
+				E8B2AAC91EF1A3BD0054BEB1 /* StudentItem.swift in Sources */,
+				E8B2AACD1EF1B02A0054BEB1 /* StudentItemHeader.swift in Sources */,
+				E8B2AAC71EF1A3670054BEB1 /* MyStudentViewController.swift in Sources */,
+				E8B2AACB1EF1A7AE0054BEB1 /* StudentItemCell.swift in Sources */,
 				E8B2AAB31EF1A0620054BEB1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

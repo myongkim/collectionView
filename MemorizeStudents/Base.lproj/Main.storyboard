@@ -1,26 +1,117 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lhz-1g-jeA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--My Students-->
+        <scene sceneID="6eu-es-bfC">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <collectionViewController id="vz2-Jm-TtF" customClass="MyStudentViewController" customModule="MemorizeStudents" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Nlk-vY-iax">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dOb-8a-NgV">
+                            <size key="itemSize" width="146" height="110"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="wUI-lx-3Ek" customClass="StudentItemCell" customModule="MemorizeStudents" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="146" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="146" height="110"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZa-7k-JdI">
+                                            <rect key="frame" x="0.0" y="0.0" width="146" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Ph-5U-aJa">
+                                            <rect key="frame" x="0.0" y="29" width="146" height="81"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Ph-5U-aJa" secondAttribute="trailing" id="5QH-yh-HGI"/>
+                                    <constraint firstItem="vZa-7k-JdI" firstAttribute="leading" secondItem="wUI-lx-3Ek" secondAttribute="leading" id="5hV-Rl-X4W"/>
+                                    <constraint firstItem="1Ph-5U-aJa" firstAttribute="top" secondItem="vZa-7k-JdI" secondAttribute="bottom" constant="8" id="KLx-wr-JLu"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Ph-5U-aJa" secondAttribute="bottom" id="NwQ-Wm-Jd1"/>
+                                    <constraint firstItem="1Ph-5U-aJa" firstAttribute="leading" secondItem="wUI-lx-3Ek" secondAttribute="leading" id="W1X-BS-TBP"/>
+                                    <constraint firstItem="vZa-7k-JdI" firstAttribute="top" secondItem="wUI-lx-3Ek" secondAttribute="top" id="WxH-nr-x08"/>
+                                    <constraint firstAttribute="trailing" secondItem="vZa-7k-JdI" secondAttribute="trailing" id="qD8-y5-3v9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="studentImageView" destination="1Ph-5U-aJa" id="nwx-2N-EOk"/>
+                                    <outlet property="studentNameLabel" destination="vZa-7k-JdI" id="cqk-UG-6ng"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SectionHeader" id="LjP-1F-eri" customClass="StudentItemHeader" customModule="MemorizeStudents" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ja-SH-hnl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="5Ja-SH-hnl" secondAttribute="trailing" id="5oA-1P-XzB"/>
+                                <constraint firstItem="5Ja-SH-hnl" firstAttribute="top" secondItem="LjP-1F-eri" secondAttribute="top" id="RXd-5N-rtx"/>
+                                <constraint firstAttribute="bottom" secondItem="5Ja-SH-hnl" secondAttribute="bottom" id="nqP-YJ-zuq"/>
+                                <constraint firstItem="5Ja-SH-hnl" firstAttribute="leading" secondItem="LjP-1F-eri" secondAttribute="leading" id="qJQ-Ng-j7z"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="titleLabel" destination="5Ja-SH-hnl" id="qco-pP-8TG"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="vz2-Jm-TtF" id="J3N-qv-FBG"/>
+                            <outlet property="delegate" destination="vz2-Jm-TtF" id="sjc-X4-Wfq"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="My Students" id="Zll-uP-Cdf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dPY-lE-qxp">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="vz2-Jm-TtF" id="oCo-sh-SdE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uTj-n4-uFJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1207.2" y="-171.36431784107947"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5H1-9r-Qkc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lhz-1g-jeA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pjp-6d-OS4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vz2-Jm-TtF" kind="relationship" relationship="rootViewController" id="QBa-r4-FMj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j5P-2w-xS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="268" y="-171.36431784107947"/>
         </scene>
     </scenes>
 </document>
