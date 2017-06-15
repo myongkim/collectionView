@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StudentItem {
+class StudentItem: CustomStringConvertible {
     var name: String
     var period: Period
     var imageName: String
@@ -17,6 +17,10 @@ class StudentItem {
     self.name = name
     self.period = period
     self.imageName = imageName
+    }
+    
+    var description: String {
+        return "\(name) - \(period.description())"
     }
 }
     

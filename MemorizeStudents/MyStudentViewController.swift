@@ -9,8 +9,6 @@
 import UIKit
 
 class MyStudentViewController: UICollectionViewController {
-// MARK: - Identifier Constants
-// MARK: - Interface Builder Outlets
 // MARK: - Properties
     var bBlockStudents = [StudentItem]()
     var cBlockStudents = [StudentItem]()
@@ -36,8 +34,6 @@ class MyStudentViewController: UICollectionViewController {
         layout.itemSize = CGSize(width: width, height: width)
     }
     
-
-// MARK: - Navigation
 // MARK: - IBActions
     @IBAction func addButtonTapped(_ sender: Any) {
         let item = StudentItem(name: "New Student", period: .BBlock, imageName: "kids/StickFigure.png")
@@ -47,8 +43,6 @@ class MyStudentViewController: UICollectionViewController {
         collectionView?.insertItems(at: [indexPath])
     }
     
-// MARK: - Helper Functions
-// MARK: - Delegates / Extensions
 // MARK: - CollectionViewMethods
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -93,15 +87,25 @@ class MyStudentViewController: UICollectionViewController {
         
         allStudents[sourceIndexPath.section].remove(at: sourceIndexPath.row)
         
-        if sourceIndexPath.section == destinationIndexPath.section {
-            allStudents[sourceIndexPath.section].insert(itemToMove, at: destinationIndexPath.row)
+        if sourceIndexPath.section == destinationIndexPath.row {
             
+        
+            allStudents[destinationIndexPath.section].insert(itemToMove, at: destinationIndexPath.row)
+        
         } else {
         
-        allStudents[destinationIndexPath.section].insert(itemToMove, at: sourceIndexPath.row)
+            allStudents[destinationIndexPath.section].insert(itemToMove, at: destinationIndexPath.row)
+            
+            if destinationIndexPath.section == 0 {
+                itemToMove.period = Period.BBlock
+            } else {
+                itemToMove.period = Period.CBlock
+            }
         
+            
         }
         collectionView.reloadData()
+        
     }
     
     //delete students:
